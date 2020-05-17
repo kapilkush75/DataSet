@@ -1,0 +1,233 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang16393{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;\red90\green90\blue182;\red182\green59\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs29 Chat Log   C:\\Users\\kushwaha\\Documents\\Kapil-Own\\AIML_IITRoorkee_Course\\New folder\\ChatLog 10 Days Live Online FDP Training On AI _ ML by Finland Labs 2020_05_12 21_27.rtf\b0\par
+\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 18:49: https://raw.githubusercontent.com/umangkejriwal1122/Machine-Learning/master/Open%20CV/face.xml\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 18:49: https://raw.githubusercontent.com/umangkejriwal1122/Machine-Learning/master/Open%20CV/faces.jpg\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 19:14: for x,y,w,h in faces:\par
+    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+cv2.imshow("Faces",img)\par
+cv2.waitKey(0)\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Attendee 49 (to Everyone)\b0 : \cf1 19:15: Sir why does it detects a facs twice\cf2\par
+\cf3\b Attendee 6 (to Everyone)\b0 : \cf1 19:20: Done\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 19:24: https://raw.githubusercontent.com/umangkejriwal1122/Machine-Learning/master/Open%20CV/eye.xml\cf2\par
+\cf4\b Kapil Kushwaha (to Organizer(s) Only)\b0 : \cf1 19:27: Done sir\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 19:27: Done Sir\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 19:35: face_cascade = cv2.CascadeClassifier(xml)\par
+eye_cascade = cv2.CascadeClassifier(eye)\par
+img = cv2.imread(image)\par
+faces = face_cascade.detectMultiScale(img,1.2,5)\par
+for x,y,w,h in faces:\par
+    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+    my_face = img[y:y+h, x:x+w]\par
+    eyes = eye_cascade.detectMultiScale(img)\par
+cv2.imshow("Faces",img)\par
+cv2.waitKey(0)\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 19:42: face_cascade = cv2.CascadeClassifier(xml)\par
+eye_cascade = cv2.CascadeClassifier(eye)\par
+img = cv2.imread(image)\par
+faces = face_cascade.detectMultiScale(img,1.2,5)\par
+for x,y,w,h in faces:\par
+    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+    my_face = img[y:y+h, x:x+w]\par
+    eyes = eye_cascade.detectMultiScale(my_face,1.1)\par
+    for ex,ey,ew,eh in eyes:\par
+        cv2.rectangle(my_face,(ex,ey),(ex+ew,ey+eh),(0,0,255),1)\par
+cv2.imshow("Faces",img)\par
+cv2.waitKey(0)\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 19:47: face_cascade = cv2.CascadeClassifier(xml)\par
+eye_cascade = cv2.CascadeClassifier(eye)\par
+img = cv2.imread(image)\par
+faces = face_cascade.detectMultiScale(img,1.3,5)\par
+for x,y,w,h in faces:\par
+    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+    my_face = img[y:y+h, x:x+w]\par
+    eyes = eye_cascade.detectMultiScale(my_face,1.2)\par
+    for ex,ey,ew,eh in eyes:\par
+        cv2.rectangle(my_face,(ex,ey),(ex+ew,ey+eh),(0,0,255),1)\par
+cv2.imshow("Faces",img)\par
+cv2.waitKey(0)\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 19:49: https://raw.githubusercontent.com/umangkejriwal1122/Machine-Learning/master/Open%20CV/smile.xml\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 19:49: https://raw.githubusercontent.com/umangkejriwal1122/Machine-Learning/master/Open%20CV/smiles.jpg\cf2\par
+\cf3\b Attendee 6 (to Everyone)\b0 : \cf1 19:56: Doing\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 20:07: #### Eyes Detection\par
+import cv2\par
+xml = r'C:\\Users\\umang\\Desktop\\face.xml'\par
+image = r'C:\\Users\\umang\\Desktop\\faces.jpg'\par
+eye = r'C:\\Users\\umang\\Desktop\\eye.xml'\par
+face_cascade = cv2.CascadeClassifier(xml)\par
+eye_cascade = cv2.CascadeClassifier(eye)\par
+img = cv2.imread(image)\par
+faces = face_cascade.detectMultiScale(img,1.3,5)\par
+for x,y,w,h in faces:\par
+    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+    my_face = img[y:y+h, x:x+w]\par
+    eyes = eye_cascade.detectMultiScale(my_face,1.2)\par
+    for ex,ey,ew,eh in eyes:\par
+        cv2.rectangle(my_face,(ex,ey),(ex+ew,ey+eh),(0,0,255),1)\par
+cv2.imshow("Faces",img)\par
+cv2.waitKey(0)\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 20:08: #### Smile Detection\par
+import cv2\par
+xml = r'C:\\Users\\umang\\Desktop\\face.xml'\par
+image = r'C:\\Users\\umang\\Desktop\\smiles.jpg'\par
+smile = r'C:\\Users\\umang\\Desktop\\smile.xml'\par
+face_cascade = cv2.CascadeClassifier(xml)\par
+smile_cascade = cv2.CascadeClassifier(smile)\par
+img = cv2.imread(image)\par
+faces = face_cascade.detectMultiScale(img,1.2,5)    ###(image name, scale factor, neighbors)\par
+for x,y,w,h in faces:\par
+    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+    my_face = img[y:y+h, x:x+w]\par
+    smiles = smile_cascade.detectMultiScale(my_face,1.8,12)\par
+    for ex,ey,ew,eh in smiles:\par
+        cv2.rectangle(my_face,(ex,ey),(ex+ew,ey+eh),(0,0,255),1)\par
+cv2.imshow("Faces",img)\par
+cv2.waitKey(0)\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 20:09: import cv2\par
+cam = cv2.VideoCapture(0)  ### Open the default webcam\par
+while True:\par
+    ret,frame = cam.read()\par
+    cv2.imshow("Webcam",frame)  ### 13 is the ASCII of Enter\par
+    if cv2.waitKey(1) == 13:\par
+        break\par
+cam.release()\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 20:12: #### Camera\par
+import cv2\par
+cam = cv2.VideoCapture(0)  ### Open the default webcam\par
+xml = r'C:\\Users\\umang\\Desktop\\face.xml'\par
+face_cascade = cv2.CascadeClassifier(xml)\par
+while True:\par
+    ret,frame = cam.read()\par
+    faces = face_cascade.detectMultiScale(img,1.2,5)\par
+    for x,y,w,h in faces:\par
+        cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+    cv2.imshow("Webcam",frame)  ### 13 is the ASCII of Enter\par
+    if cv2.waitKey(1) == 13:\par
+        break\par
+cam.release()\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Attendee 6 (to Everyone)\b0 : \cf1 20:17: Done\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 20:18: how to open camera\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 20:18: Sir below error\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 20:19: error                                     Traceback (most recent call last)\par
+<ipython-input-84-84650c2f91b5> in <module>\par
+      6 while True:\par
+      7     ret,frame = cam.read()\par
+----> 8     faces = face_cascade.detectMultiScale(img,1.2,5)\par
+      9     for x,y,w,h in faces:\par
+     10         cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)\par
+\par
+error: OpenCV(4.2.0) C:\\projects\\opencv-python\\opencv\\modules\\objdetect\\src\\cascadedetect.cpp:1689: error: (-215:Assertion failed) !empty() in function 'cv::CascadeClassifier::detectMultiScale'\par
+\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 20:19: #### Camera\par
+import cv2\par
+cam = cv2.VideoCapture(0)  ### Open the default webcam\par
+xml = r'C:\\Users\\umang\\Desktop\\face.xml'\par
+face_cascade = cv2.CascadeClassifier(xml)\par
+while True:\par
+    ret,frame = cam.read()\par
+    faces = face_cascade.detectMultiScale(frame,1.2,5)\par
+    for x,y,w,h in faces:\par
+        cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)\par
+    cv2.imshow("Webcam",frame)  ### 13 is the ASCII of Enter\par
+    if cv2.waitKey(1) == 13:\par
+        break\par
+cam.release()\par
+cv2.destroyAllWindows()\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 20:20: got it sir\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 20:31: Sir , how we can capture the face image if detected \cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 20:33: #### Camera\par
+## Total Faces = 2 \par
+import cv2\par
+cam = cv2.VideoCapture(0)  ### Open the default webcam\par
+xml = r'C:\\Users\\umang\\Desktop\\face.xml'\par
+face_cascade = cv2.CascadeClassifier(xml)\par
+while True:\par
+    ret,frame = cam.read()\par
+    faces = face_cascade.detectMultiScale(frame,1.2,5)\par
+    for x,y,w,h in faces:\par
+        cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)\par
+        #print(len(faces))\par
+        cv2.putText(frame,"Total Faces-"+str(len(faces)),(50,50),cv2.FONT_ITALIC,2,(0,0,255),4)\par
+    cv2.imshow("Webcam",frame)  ### 13 is the ASCII of Enter\par
+    if cv2.waitKey(1) == 13:\par
+        break\par
+cam.release()\par
+cv2.destroyAllWindows()\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 20:35: done sir\cf2\par
+\cf5\b Kapil Kushwaha (to Finland Labs)\b0 : \cf1 20:35: Sir , how we can capture the face image if detected \par
+\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 20:54: cam = cv2.VideoCapture(0)\par
+while True:\par
+    ret,frame = cam.read()\par
+    hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)\par
+    ### Red colour\par
+    low = np.array([140,150,0])\par
+    high = np.array([180,255,255])\par
+    image_mask = cv2.inRange(hsv,low,high)\par
+    output = cv2.bitwise_and(frame,frame,mask=image_mask)\par
+    cv2.imshow("HSV",hsv)  ### 13 is the ASCII of Enter\par
+    cv2.imshow("MASK",image_mask)\par
+    cv2.imshow("OUTPUT",output)\par
+    if cv2.waitKey(1) == 13:\par
+        break\par
+cam.release()\par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 21:13: import cv2\par
+\par
+imgpath1 =  r"E:\\Machine Learning - Umang\\OpenCv\\images\\lena_color_512.tif"\par
+imgpath2 =  r"E:\\Machine Learning - Umang\\OpenCv\\images\\4.2.01.tiff"\par
+\par
+img1 = cv2.imread(imgpath1)\par
+img2 = cv2.imread(imgpath2)\par
+\par
+#img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)\par
+#img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)\par
+\par
+## output = a.img1 + b.img2 + y    \par
+## (a,b = weight of img1 and img2, y=brightness)\par
+\par
+# a = 0.5, b = 0.6, y=0\par
+output1 = cv2.addWeighted(img1,0.3,img2,0.6,0)\par
+\par
+# a = 0.5, b=0.6, y=50\par
+output2 = cv2.addWeighted(img1,0.5,img2,0.6,50)\par
+\par
+cv2.imshow("Output 1",output1)\par
+cv2.imshow("Output 2",output2)\par
+cv2.waitKey(0)\par
+cv2.destroyAllWindows()\par
+\par
+ \cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 21:13: import cv2\par
+import numpy as np\par
+import time\par
+\par
+imgpath1 =  r"E:\\Machine Learning - Umang\\OpenCv\\images\\lena_color_512.tif"\par
+imgpath2 =  r"E:\\Machine Learning - Umang\\OpenCv\\images\\4.2.01.tiff"\par
+    \par
+img1 = cv2.imread(imgpath1, 1)\par
+img2 = cv2.imread(imgpath2, 1)\par
+    \par
+for i in np.linspace(0, 1, 100):\par
+    a = i\par
+    b = 1 - a\par
+    output = cv2.addWeighted(img1, a, img2, b, 0)\par
+    cv2.imshow('Transition', output)\par
+    time.sleep(0.1)    ## in secs\par
+    if cv2.waitKey(1) == 27:   #esc key\par
+        break\par
+        \par
+cv2.destroyAllWindows()\cf2\par
+\cf3\b Attendee 49 (to Everyone)\b0 : \cf1 21:15: Ok sir bye bye \u55357?\u56395?\cf2\par
+\cf3\b Finland Labs (to Everyone)\b0 : \cf1 21:19: https://drive.google.com/drive/folders/15fCGN1yzzABLYcRjhLiv4d5QNOcrDiew?usp=sharing\cf0\par
+}
+ 
